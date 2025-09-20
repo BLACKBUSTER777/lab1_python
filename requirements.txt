@@ -1,0 +1,6 @@
+
+---
+
+## 📌 requirements.txt
+```txt
+pytest>=7.0
