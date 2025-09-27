@@ -3,4 +3,9 @@
 
 ## requirements.txt
 ```txt
+# Основное окружение
+python_version >= "3.8"
+
+# Для тестов
 pytest>=7.0
+
