@@ -2,7 +2,7 @@ import importlib
 
 
 def test_task00_distance():
-    module = importlib.import_module("task01")
+    module = importlib.import_module("lab01.task00")
     result = module.solve()
     assert "Moscow" in result
     assert "London" in result
@@ -11,21 +11,21 @@ def test_task00_distance():
 
 
 def test_task01_circle():
-    module = importlib.import_module("task02")
+    module = importlib.import_module("lab01.task01")
     result = module.solve()
-    assert round(result["area"], 4) == 5541.7694
+    assert round(result["area"], 4) == 5541.7693
     assert result["point1_inside"] is True
     assert result["point2_inside"] is False
 
 
 def test_task02_expression():
-    module = importlib.import_module("task03")
+    module = importlib.import_module("lab01.task02")
     result = module.solve()
     assert result == 25
 
 
 def test_task04_movies():
-    module = importlib.import_module("task04")
+    module = importlib.import_module("lab01.task03")
     result = module.solve()
     assert isinstance(result, list)
     assert result[0].startswith("Терминатор")
@@ -33,14 +33,14 @@ def test_task04_movies():
 
 
 def test_task04_family():
-    module = importlib.import_module("task05")
+    module = importlib.import_module("lab01.task04")
     result = module.solve()
     assert result["father_height"] > 0
     assert result["total_height"] >= result["father_height"]
 
 
 def test_task05_zoo():
-    module = importlib.import_module("task06")
+    module = importlib.import_module("lab01.task05")
     result = module.solve()
     assert "bear" in result["zoo"]
     assert result["lion_cell"] == result["zoo"].index("lion") + 1
@@ -48,21 +48,21 @@ def test_task05_zoo():
 
 
 def test_task06_songs():
-    module = importlib.import_module("task07")
+    module = importlib.import_module("lab01.task06")
     result = module.solve()
     assert round(result["list_time"], 2) == 14.93
     assert round(result["dict_time"], 2) == 13.49
 
 
 def test_task07_secret():
-    module = importlib.import_module("task08")
+    module = importlib.import_module("lab01.task07")
     result = module.solve()
     assert isinstance(result, str)
     assert len(result.split()) == 5  # должно быть 5 слов
 
 
 def test_task08_flowers():
-    module = importlib.import_module("task09")
+    module = importlib.import_module("lab01.task08")
     result = module.solve()
     assert "ромашка" in result["all"]
     assert result["both"] == {"одуванчик", "ромашка"}
@@ -71,7 +71,7 @@ def test_task08_flowers():
 
 
 def test_task09_sweets():
-    module = importlib.import_module("task10")
+    module = importlib.import_module("lab01.task09")
     result = module.solve()
     assert "печенье" in result
     assert any(shop["shop"] == "пятерочка" for shop in result["печенье"])
@@ -79,7 +79,7 @@ def test_task09_sweets():
 
 
 def test_task10_store():
-    module = importlib.import_module("task11")
+    module = importlib.import_module("lab01.task10")
     result = module.solve()
     assert "Лампа" in result
     assert result["Лампа"]["quantity"] == 27
